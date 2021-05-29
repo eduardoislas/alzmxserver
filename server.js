@@ -18,7 +18,7 @@ app.use(cors());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
+    // parse application/json
 app.use(bodyParser.json());
 
 
@@ -36,14 +36,6 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: tru
         if (err) throw err;
         console.log('Base de datos ONLINE');
     });
-
-//Crear Servidor HTTPS
-// https.createServer({
-//     key: fs.readFileSync('acislab_key.key'),
-//     cert: fs.readFileSync('acislab_crt.crt')
-// }, app).listen(process.env.PORT, () => {
-//     console.log('Escuchando puerto: ', process.env.PORT);
-// });
 
 
 
